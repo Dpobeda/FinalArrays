@@ -8,6 +8,8 @@ int main(){
 	int n, m;
 	int sum;
 
+	std::cout << "Hello world!\n\n";
+
 	// Задача 1. Сортировка половины массива.
 	/*std::cout << "Задача 1.\nИзначальный массив:\n";
 	const int size1 = 10;
