@@ -8,8 +8,6 @@ int main(){
 	int n, m;
 	int sum;
 
-	std::cout << "Hello world!\n\n";
-
 	// Задача 1. Сортировка половины массива.
 	/*std::cout << "Задача 1.\nИзначальный массив:\n";
 	const int size1 = 10;
@@ -78,6 +76,28 @@ int main(){
 	std::cout << std::endl;*/
 
 	// Задача 4. 
+	std::cout << "Задача 1.\nИзначальный массив:\n";
+	const int size1 = 10;
+	int arr1[size1];
+	srand(time(NULL));
+	for (int i = 0; i < size1; i++) {
+		arr1[i] = rand() % 11; // [0..10]
+		std::cout << arr1[i] << ' ';
+	}
+	std::cout << std::endl;
+
+	// Пузырьковая сортировка.
+	for (int i = 10; i < 0; i++)
+		for (int j = 0; j < i; j++)
+			if (arr1[j] < arr1[j + 1])
+				std::swap(arr1[j], arr1[j + 1]);
+
+
+	std::cout << "Итоговый массив:\n";
+	for (int i = 0; i < 5; i++)
+		std::cout << arr1[i] << ' ';
+		std::cout << "\n\n"; 
+
 
 	return 0;
-}
+	}
